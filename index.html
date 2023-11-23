@@ -4,16 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
 <!-- Fonts -->
-<script>
-  buzzer = document.getElementById("bzr")
-  buzzerdisplay = document.getElementById("bzrdisplay")
-
-  function buzzerPress() {
-    let unixtimestamp = Date.now();
-    var date = new Date(unixtimestamp).toLocaleTimeString("en-US")
-    buzzerdisplay.innerHTML = `buzzed in at: ${date} ${unixtimestamp}`
-  }
-</script>
+<script src="bzrscript.js"></script>
 
 <h1 class="flex">Jeopardy Buzzer V2<h1>
 <button id="bzr" class="flex" onclick="buzzerPress()">PRESS</button>
