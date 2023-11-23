@@ -8,7 +8,17 @@
     <link href="bzrstyle.css" rel="stylesheet">
     <!-- Fonts -->
   </div>
-  <script src="bzrscript.js"></script>
+  <script>
+    var buzzer = document.getElementById("bzr");
+    var buzzerdisplay = document.getElementById("bzrdisplay");
+
+    function buzzerPress() {
+	    let unixtimestamp = Date.now();
+	    var date = new Date(unixtimestamp).toLocaleTimeString("en-US");
+	    buzzerdisplay.innerHTML = `buzzed in at: ${date} ${unixtimestamp}`;
+    }
+  </script>
+  
   <h1 class="flex">Jeopardy Buzzer V2<h1>
   <button id="bzr" class="flex" onclick="buzzerPress()">PRESS</button>
   <h1 class="flex" id="bzrdisplay">buzzed in at: no data<h1>
