@@ -8,12 +8,11 @@
   buzzer = document.getElementById("bzr")
   buzzerdisplay = document.getElementById("bzrdisplay")
 
-  function buzzerPress() {
+  const buzzerPress = () => {
     let unixtimestamp = Date.now();
     var date = new Date(unixtimestamp).toLocaleTimeString("en-US")
     buzzerdisplay.innerHTML = `buzzed in at: ${date} ${unixtimestamp}`
   }
-
 </script>
 
 <h1 class="flex">Jeopardy Buzzer V2<h1>
